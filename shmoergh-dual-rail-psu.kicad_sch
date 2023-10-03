@@ -708,7 +708,7 @@
       (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps65131.pdf" (at 1.27 29.21 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "LCSC" "TPS65131RGER" (at -6.35 25.4 0)
+      (property "LCSC" "C87663" (at -6.35 25.4 0)
         (effects (font (size 1.27 1.27)))
       )
       (symbol "TPS65131RGER (Schematic)_1_1"
@@ -783,6 +783,10 @@
         (pin input line (at -16.51 19.05 0) (length 2.54)
           (name "INP_2" (effects (font (size 1.27 1.27))))
           (number "24" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line (at -16.51 -20.32 0) (length 2.54)
+          (name "PGND_TH" (effects (font (size 1.27 1.27))))
+          (number "25" (effects (font (size 1.27 1.27))))
         )
         (pin power_in line (at 16.51 -20.32 180) (length 2.54)
           (name "PGND_2" (effects (font (size 1.27 1.27))))
@@ -1468,6 +1472,10 @@
     (stroke (width 0) (type default))
     (uuid 400000ef-a8e4-4213-8fb9-1a0a2851d4c8)
   )
+  (wire (pts (xy 71.12 171.45) (xy 69.85 171.45))
+    (stroke (width 0) (type default))
+    (uuid 41f7e422-ba8d-48d3-9283-f5aeb4e45a44)
+  )
   (wire (pts (xy 69.85 161.29) (xy 69.85 158.75))
     (stroke (width 0) (type default))
     (uuid 42218743-32b5-4078-9f58-aaa49003162f)
@@ -1580,6 +1588,10 @@
   (wire (pts (xy 74.93 78.74) (xy 74.93 80.01))
     (stroke (width 0) (type default))
     (uuid 7feb962c-8fda-40d0-8117-8b18b3b00016)
+  )
+  (wire (pts (xy 69.85 171.45) (xy 69.85 173.99))
+    (stroke (width 0) (type default))
+    (uuid 846c0d22-8f89-4fd5-98b6-412fc20613fb)
   )
   (wire (pts (xy 109.22 134.62) (xy 129.54 134.62))
     (stroke (width 0) (type default))
@@ -1956,7 +1968,7 @@
     (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left bottom))
     (uuid 51d0e62f-d476-4233-bcb6-19827b8de5d3)
   )
-  (text "VoutP = -12.1V" (at 148.59 154.94 0)
+  (text "VoutN = -12.1V" (at 148.59 154.94 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 64c441c4-c54d-4d89-afaf-f50650849d0c)
   )
@@ -2000,6 +2012,10 @@
   (label "OUTN" (at 115.57 161.29 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5ad6b359-8a55-4929-9cfc-872aa4d9007d)
+  )
+  (label "C1" (at 50.8 60.96 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 9f45fffc-65c3-4d1f-9e90-2ede261f02e6)
   )
 
   (global_label "FB" (shape input) (at 90.17 71.12 0) (fields_autoplaced)
@@ -2063,9 +2079,9 @@
     (property "LCSC" "C15127" (at 41.91 119.38 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 26621cd8-6d65-4561-bac1-a8344e6664b9))
-    (pin "2" (uuid 569618fd-ffcf-49d7-9366-df9baabac51b))
-    (pin "3" (uuid 93b7012f-35ce-4ae7-86b7-11b41fd9b1fc))
+    (pin "1" (uuid c580d111-ea11-4497-a3e1-5f4df1c3c3a4))
+    (pin "2" (uuid 25790722-2e79-49c2-8149-f1fe5da83cac))
+    (pin "3" (uuid 9fa4a259-ff51-4c0c-8886-683b70e86c89))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2093,8 +2109,8 @@
     (property "LCSC" "C25905" (at 242.57 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid baeae104-fb4b-4ae0-979c-e791aaf97a70))
-    (pin "2" (uuid 23b263e4-5b29-4207-a303-b316685c8381))
+    (pin "1" (uuid dee0d67c-f268-4f4e-bce7-e58f638c0abb))
+    (pin "2" (uuid b77218d4-e714-4723-8445-eb434422b820))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2119,7 +2135,7 @@
     (property "Datasheet" "" (at 124.46 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid bea55f9c-2f93-4189-b751-44e10c4385fe))
+    (pin "1" (uuid 976e0001-fd37-4a96-a27a-f21ccd126f71))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2144,7 +2160,7 @@
     (property "Datasheet" "" (at 113.03 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2d009b1c-4f59-4f40-b1f7-0230ec03407d))
+    (pin "1" (uuid 4cc1b1f2-2240-45ec-bee4-f6873572e617))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2169,7 +2185,7 @@
     (property "Datasheet" "" (at 242.57 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7938a27c-6a9d-42b0-b4e8-63c7b6c16970))
+    (pin "1" (uuid b4adcf87-dbb9-4f01-ba05-095db899d674))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2194,7 +2210,7 @@
     (property "Datasheet" "" (at 129.54 144.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3d9d21d5-5987-445f-a57e-a8c2a828a785))
+    (pin "1" (uuid 1eb9dab2-1873-48aa-9a4b-229650f692c4))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2219,7 +2235,7 @@
     (property "Datasheet" "" (at 151.13 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3ea796a5-5f39-48df-a37d-69b37e992b3b))
+    (pin "1" (uuid 4517a3b7-71c7-45fe-be06-6401fc434b30))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2247,8 +2263,8 @@
     (property "LCSC" "C191023" (at 146.05 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 88c7d66b-4347-4013-98bf-61337d71d018))
-    (pin "2" (uuid 4b4e32f0-fe54-4fea-bd55-73dd3f737b62))
+    (pin "1" (uuid 41c5d025-015d-468f-981e-89fe605fc3ac))
+    (pin "2" (uuid ee4add93-c707-4277-8460-a43bdb2a035a))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2276,8 +2292,8 @@
     (property "LCSC" "C22775" (at 38.1 156.21 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e734e887-f4ee-44c0-b2ae-b44652b45c4a))
-    (pin "2" (uuid ec6b0485-ba8f-43d9-9326-4ca2cd121a23))
+    (pin "1" (uuid 91fc5c50-ddac-47e7-aafb-a53cbcbd523b))
+    (pin "2" (uuid d3cf47df-bad0-4cdf-b5eb-27f378c9ef4c))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2305,8 +2321,8 @@
     (property "LCSC" "C22978" (at 140.97 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9dfd24bb-977d-4e69-b12c-fb0af951933f))
-    (pin "2" (uuid 5a2b3431-ace8-439f-a0ca-c69feb88b978))
+    (pin "1" (uuid 6e26980d-a15d-4bc4-b42c-b62ed9fefeb5))
+    (pin "2" (uuid c93760e1-c419-41bd-97a1-f086a1186ea5))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2334,36 +2350,12 @@
     (property "LCSC" "C307331" (at 49.53 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 652029aa-63fd-4378-aa0e-2927113bb175))
-    (pin "2" (uuid 60aae749-6f92-4a7a-a737-4da4288a5cc3))
+    (pin "1" (uuid 152d4c7c-98a6-48a5-ab4e-e41910a2632d))
+    (pin "2" (uuid 1fb30c41-ec42-448e-a50c-0953e74b6898))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
           (reference "C6") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole") (at 234.95 158.75 0) (unit 1)
-    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 2eb437c0-1fac-475e-932b-03884ff90787)
-    (property "Reference" "H4" (at 237.49 157.48 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MountingHole" (at 237.49 160.02 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3mm_Pad_Via" (at 234.95 158.75 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 234.95 158.75 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "shmoergh-dual-rail-psu"
-        (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
-          (reference "H4") (unit 1)
         )
       )
     )
@@ -2387,8 +2379,8 @@
     (property "LCSC" "C8598" (at 106.68 72.39 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 733264e7-647a-47c5-b1a2-fc4c925b2dad))
-    (pin "2" (uuid bc03467c-2b13-4c81-963b-83fe128ff45e))
+    (pin "1" (uuid 73d39c7a-ab7d-4158-9670-95908d6de489))
+    (pin "2" (uuid 9154d88d-8caa-44d0-9558-f0ca68548ea4))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2413,7 +2405,7 @@
     (property "Datasheet" "" (at 140.97 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2e3fe2d9-304d-4521-a03d-c7d9beff8e53))
+    (pin "1" (uuid ef0d8a1d-74b9-4100-abbf-3e40daaf1d4c))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2438,33 +2430,34 @@
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps65131.pdf" (at 88.9 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "TPS65131RGER" (at 87.63 151.13 0)
+    (property "LCSC" "C87663" (at 87.63 151.13 0)
       (effects (font (size 1.27 1.27)))
     )
-    (pin "1" (uuid b33f4406-e032-42e2-93b0-c712ea86c999))
-    (pin "10" (uuid a0c6f654-7859-45be-90a3-d7d64688ff09))
-    (pin "11" (uuid 3a07c9df-d4db-4d07-b727-1cc07eaffda9))
-    (pin "12" (uuid 8e057eff-22ed-4aad-b568-294657a8ac70))
-    (pin "13" (uuid fd6dcf72-4c9d-41dc-8c37-d624040fd9f6))
-    (pin "14" (uuid 3642ef7c-f7db-4b78-a07b-c5ccd6a6d0e5))
-    (pin "15" (uuid 5ecb0b50-1e8c-4adf-88b1-8556f3c2dfe2))
-    (pin "16" (uuid c9bf82ee-5fd4-4991-b480-76384e5316aa))
-    (pin "17" (uuid 5202dd3a-90eb-42e4-8f51-4c7e66716c91))
-    (pin "18" (uuid f12f8a1f-f2a9-4690-b754-d7f772e98335))
-    (pin "19" (uuid ffbcb462-0e1f-4c65-b0d0-79bdda81f767))
-    (pin "2" (uuid 609d76a1-da55-4888-bb48-7a0b417d5331))
-    (pin "20" (uuid 11a68a8a-7637-427e-84e4-b60c69e16520))
-    (pin "21" (uuid a1719fed-b449-4943-beee-fd0bb436264e))
-    (pin "22" (uuid 6f023f28-197f-4ce1-8e5e-5bf8d29b0f90))
-    (pin "23" (uuid c2a70847-7325-4004-aeaf-2f7827d96986))
-    (pin "24" (uuid 63428b8c-c4bf-4da0-92e1-04da0f4077a4))
-    (pin "3" (uuid 1ee74372-664a-46cd-810e-7bb772998002))
-    (pin "4" (uuid 82e8d4f2-400e-4702-8643-0dda998315a8))
-    (pin "5" (uuid 5c1fe406-d5f3-4d73-b22d-d80d55cd5d02))
-    (pin "6" (uuid 040f62ac-8165-4503-9698-e72aff675ae5))
-    (pin "7" (uuid 245d29b0-f834-47fe-ae9d-e1e97ea2f3d8))
-    (pin "8" (uuid 91d818f5-833b-4ef0-975e-9293da66c2e5))
-    (pin "9" (uuid 81756451-dc88-466c-bf2e-717f0c9805a2))
+    (pin "1" (uuid 23fc150d-aae7-49f8-bda6-8e5e306580ec))
+    (pin "10" (uuid 9e7ff5e0-f8a7-4099-a519-03a18cc034ee))
+    (pin "11" (uuid 624c010f-fcc6-4094-b96d-0c3f45028301))
+    (pin "12" (uuid 8db59695-8162-4da3-9cf8-86056120f8e3))
+    (pin "13" (uuid a671a7d8-b277-43ff-9f26-64c10a9d8a6c))
+    (pin "14" (uuid c56aa28e-8d9a-4227-9a08-573bd2bf48ea))
+    (pin "15" (uuid af2b7331-aae2-476d-9cac-04076efdf264))
+    (pin "16" (uuid 8c080aba-1dd2-42f3-a5a6-e6b81825d994))
+    (pin "17" (uuid 4a0f3f30-dea8-46a5-9db2-326b4aee3d97))
+    (pin "18" (uuid a06e21e4-09f1-41cb-a37e-29950681cbdf))
+    (pin "19" (uuid e9ea6d18-4618-41fe-93ea-0db479204e51))
+    (pin "2" (uuid f02af3c3-6d8f-4d36-9ee3-e0a4c586c231))
+    (pin "20" (uuid 4fe3e59e-071d-4d01-9bdc-8b469f7cb422))
+    (pin "21" (uuid f267d454-ad91-4686-81e5-236429c0a8ed))
+    (pin "22" (uuid 807b9fb0-4665-46d9-bae1-e2febd98fa38))
+    (pin "23" (uuid 0efd8abc-c13e-4cb4-b75f-a612295ea9c2))
+    (pin "24" (uuid 0d25e98e-faa0-4adb-9f1a-9d71f523fbbd))
+    (pin "25" (uuid 8eb9d0f8-0de9-4723-acd0-d5fe86e659d9))
+    (pin "3" (uuid 57c57954-6b9d-49dd-86ba-4e569c5cae1e))
+    (pin "4" (uuid 66a1bf87-1573-424e-b8c1-f26a62b8c0fa))
+    (pin "5" (uuid 76bf7318-057c-41d7-8d55-f8933218022b))
+    (pin "6" (uuid 78e83fc4-a7da-47fc-b02a-e738d3d111ab))
+    (pin "7" (uuid dfdc51a9-1a5c-4da9-bff0-042b353080dc))
+    (pin "8" (uuid 07b92783-4a54-4ed0-b958-28b1b73f9c4a))
+    (pin "9" (uuid 7952848f-00d7-4e15-b508-55785647dbe0))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2489,7 +2482,7 @@
     (property "Datasheet" "" (at 269.24 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 64918a64-ec2b-4cbc-8e06-b631d7a281a1))
+    (pin "1" (uuid c1d64d99-f934-435a-bc34-18df47d57fb0))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2517,9 +2510,9 @@
     (property "LCSC" "C15127" (at 41.91 63.5 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6457c8ed-1296-48d5-be8f-3d7ae96756f3))
-    (pin "2" (uuid fa7f5852-5ee6-4a1a-83c3-3d03fb0d5104))
-    (pin "3" (uuid 98aeab6c-8c41-4326-a86c-d5c899d8a1be))
+    (pin "1" (uuid f89ce2b5-d3bf-4da6-a03a-4f5db4f77518))
+    (pin "2" (uuid e5ee46dd-af96-4afe-ac67-d3c675d434ca))
+    (pin "3" (uuid 9e21da82-ec03-488a-9c6b-5cc175e2758b))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2547,8 +2540,8 @@
     (property "LCSC" "C22935" (at 151.13 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e76a2450-2b08-48f7-b2e8-315db0ff8d96))
-    (pin "2" (uuid be693652-0129-409f-af69-6bd541012c08))
+    (pin "1" (uuid fdbefa5a-c49e-4b01-ad4c-f06381417680))
+    (pin "2" (uuid ab1289b8-fb4d-4b8f-b300-39b2a14aedc6))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2576,8 +2569,8 @@
     (property "LCSC" "C15195" (at 97.79 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e239f279-c442-4cd7-8a32-4118d42fcfcf))
-    (pin "2" (uuid 493b9299-61ab-45ef-8002-15f698c746bb))
+    (pin "1" (uuid e1feb5fa-7931-43f3-b1e6-5517ebe3cbcc))
+    (pin "2" (uuid 579c14e1-77cf-4a8a-ba7c-25c4eb82075d))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2587,13 +2580,13 @@
     )
   )
 
-  (symbol (lib_id "Connector:Screw_Terminal_01x03") (at 222.25 128.27 0) (mirror y) (unit 1)
+  (symbol (lib_id "Connector:Screw_Terminal_01x03") (at 222.25 128.27 180) (unit 1)
     (in_bom no) (on_board yes) (dnp no)
     (uuid 4d66b0aa-18de-4169-8802-29a435ca1c96)
-    (property "Reference" "J2" (at 222.25 133.35 0)
+    (property "Reference" "J2" (at 222.25 123.19 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Screw_Terminal_01x03" (at 222.25 121.92 0)
+    (property "Value" "Screw_Terminal_01x03" (at 222.25 120.65 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3_1x03_P5.00mm_Horizontal" (at 222.25 128.27 0)
@@ -2602,9 +2595,9 @@
     (property "Datasheet" "~" (at 222.25 128.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ee85da41-471b-48eb-95b5-7d83d257ee28))
-    (pin "2" (uuid 37df6a2b-abdb-472c-b397-af53d5c499e8))
-    (pin "3" (uuid 7360c643-e0cd-4b9d-9f36-e05f307c5cbf))
+    (pin "1" (uuid ff34334c-027d-4fd0-a184-c04b99693377))
+    (pin "2" (uuid 2994841d-531e-4f25-b36c-065a20a0dac4))
+    (pin "3" (uuid eac601b0-9693-4b22-b31c-fcdc8b7bff13))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2629,7 +2622,7 @@
     (property "Datasheet" "" (at 140.97 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 408ed5b5-172b-43e6-ad7c-6c770027cbe2))
+    (pin "1" (uuid c1494284-6184-4b94-b398-7f21462e54c2))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2654,7 +2647,7 @@
     (property "Datasheet" "" (at 69.85 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 56da8660-89bf-4886-b07a-7eef343a0027))
+    (pin "1" (uuid 85f32a61-a3db-4728-b430-2119902a09f6))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2682,8 +2675,8 @@
     (property "LCSC" "C72043" (at 226.06 71.12 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f9b95174-b1de-434e-8e19-7c40e93dd10f))
-    (pin "2" (uuid 243e0748-45c5-4ee6-bcba-643bcebb0354))
+    (pin "1" (uuid 858f1074-5970-4445-8de4-8c2104131b72))
+    (pin "2" (uuid bb3c478f-5432-47d3-bcd6-a14032b2ec4f))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2708,7 +2701,7 @@
     (property "Datasheet" "" (at 162.56 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 399b1607-37ac-4294-94f8-9a94a33b8688))
+    (pin "1" (uuid e71b18d6-f27e-49de-92a2-2b455fc11d41))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2733,7 +2726,7 @@
     (property "Datasheet" "" (at 237.49 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 45db0d7e-5cb4-46cd-9868-b6b5acd13a14))
+    (pin "1" (uuid 8c0dff2d-951d-415a-bdec-a6d29f04f7b0))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2761,8 +2754,8 @@
     (property "LCSC" "C191023" (at 86.36 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fee405cb-01e8-45d2-9234-dd050b25573d))
-    (pin "2" (uuid 8a7ab698-38ea-4f9c-9c7a-568af06ed5c9))
+    (pin "1" (uuid 69b505c7-b0b0-4c22-a51d-766f99f04e4d))
+    (pin "2" (uuid fad74760-4f98-4117-a3c9-c99fa153dbc2))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2790,8 +2783,8 @@
     (property "LCSC" "C45783" (at 124.46 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 48d134bd-7245-4565-912c-f85c12c91a98))
-    (pin "2" (uuid 20201fff-c6da-4b58-be38-862ac6ac1bb0))
+    (pin "1" (uuid f1a438ee-a6c7-4ae7-91dc-f34b128646ee))
+    (pin "2" (uuid 2ee3bacc-4a7b-44cb-a421-3ab04c9bc5d2))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2819,8 +2812,8 @@
     (property "LCSC" "C22935" (at 109.22 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 87734ac0-3ff5-4d9d-94d3-1bb3629ad91c))
-    (pin "2" (uuid 693a68d1-f181-45a4-b5d2-306e30eb725b))
+    (pin "1" (uuid d663e444-8d86-4796-8cb1-2fe342a2b566))
+    (pin "2" (uuid c2890458-93d7-40e9-a201-dea3ad08356a))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2848,8 +2841,8 @@
     (property "LCSC" "C1679" (at 139.7 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8edeae93-ab8e-42a3-b5f5-803550d0d356))
-    (pin "2" (uuid 32f75953-166a-4575-85f7-42d018bd3834))
+    (pin "1" (uuid a17feb76-715b-4ebe-8ba2-e88dc4974edd))
+    (pin "2" (uuid 1fc57ec7-edc1-4ce4-8116-783c0359761f))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2877,8 +2870,8 @@
     (property "LCSC" "C72038" (at 209.55 71.12 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d4643b48-1bc6-4206-9094-ccccd4c37938))
-    (pin "2" (uuid 904f10bf-0c54-4d50-8fc8-d7c5a705ffce))
+    (pin "1" (uuid 93dc3d33-d9a3-434b-9911-4df519e490c3))
+    (pin "2" (uuid a79a6cd1-ae8f-495b-9574-ebefb038c910))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2906,8 +2899,8 @@
     (property "LCSC" "C2286" (at 242.57 71.12 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8fa0f37a-1022-4a76-b5a1-6d72ccf04476))
-    (pin "2" (uuid ebf9fc22-9b0b-41d8-9c80-ac2757977cec))
+    (pin "1" (uuid d928a262-448e-4341-8845-65a0005950a1))
+    (pin "2" (uuid 9f8dd264-12ab-4640-a9c7-5e94b157e394))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2935,8 +2928,8 @@
     (property "LCSC" "C127327" (at 127 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid bb143164-fa1d-49cd-90ed-81be5680978c))
-    (pin "2" (uuid 1f61c1b6-4ad1-43f7-b566-201049542a86))
+    (pin "1" (uuid 14496196-28fb-4cba-99af-a25bc1663508))
+    (pin "2" (uuid a19c5297-bd39-4ffe-938c-292a651f5e84))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2961,7 +2954,7 @@
     (property "Datasheet" "~" (at 64.77 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 350bac51-f42b-4094-9a43-78f436c92eac))
+    (pin "1" (uuid 78b87d94-4122-481f-afc5-33907795a074))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -2989,8 +2982,8 @@
     (property "LCSC" "C1685" (at 118.11 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4b7cc47a-95a1-4d4a-a30f-e7d58d63ce81))
-    (pin "2" (uuid 32431c1c-6226-4be7-a4cc-cd189cbecbd5))
+    (pin "1" (uuid 696b1c3d-b72c-4f90-98b4-32fa3e3bb8f0))
+    (pin "2" (uuid 72b8e026-579f-41b4-bae5-451f2263e728))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3018,8 +3011,8 @@
     (property "LCSC" "C13585" (at 55.88 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f02dd4b9-ee33-4e31-b550-94ffaa0fbb98))
-    (pin "2" (uuid 9c718fcf-776e-4062-8466-43f12db8d4e6))
+    (pin "1" (uuid 6cb700c8-5656-422c-bdb2-24d30f5a46c9))
+    (pin "2" (uuid 05db66fd-e893-4ed9-bc44-3abbe17b8375))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3047,8 +3040,8 @@
     (property "LCSC" "C25900" (at 226.06 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 57f0a0bb-a5d7-48f5-9664-840641e3b5db))
-    (pin "2" (uuid 2d5b420f-5766-4304-b783-874dfa3fa0af))
+    (pin "1" (uuid a26f6eb7-e7af-40e6-bef0-6f168b1819c7))
+    (pin "2" (uuid 17e75e2b-99bc-499d-8941-d25ed6e43535))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3076,8 +3069,8 @@
     (property "LCSC" "C177248" (at 59.69 116.84 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f6d748cb-3f4c-4f8c-bbd4-a7b54c1bcda1))
-    (pin "2" (uuid 656e48a4-9248-48c3-96b9-d151397c31d4))
+    (pin "1" (uuid 3ac13a53-4048-498b-ac4a-9f39dea7e212))
+    (pin "2" (uuid e83fd57c-3c46-4bfb-9d45-20afcd3188b8))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3102,7 +3095,7 @@
     (property "Datasheet" "" (at 269.24 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 487e6815-dbcf-4f26-9752-9935302d40c5))
+    (pin "1" (uuid a217e877-d977-4f2d-a153-82a5fa5c0839))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3151,7 +3144,7 @@
     (property "Datasheet" "" (at 251.46 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 271577c7-10ef-478a-b7d8-3ee760db7809))
+    (pin "1" (uuid 16b3a7c5-8b33-429a-80d0-633e1136dbe6))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3176,7 +3169,7 @@
     (property "Datasheet" "" (at 49.53 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f0868e4c-85d7-47db-ac25-54d0becf6e74))
+    (pin "1" (uuid e669b156-2ade-4c31-ad67-ad0454295f8d))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3201,7 +3194,7 @@
     (property "Datasheet" "" (at 41.91 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1da8b4be-d049-4022-a4a4-bdb7d628e670))
+    (pin "1" (uuid 885ebfa6-2fd9-40a4-937a-acac16eb7ef7))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3226,7 +3219,7 @@
     (property "Datasheet" "" (at 226.06 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c0f612af-18e1-4c1e-841c-5cb12867468a))
+    (pin "1" (uuid 52b91e2d-9a48-4698-a193-0369f9969f16))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3254,8 +3247,8 @@
     (property "LCSC" "C25805" (at 151.13 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 373848d7-0d74-4e5a-a519-1b2c198a21d6))
-    (pin "2" (uuid 2cbb3b53-8bb4-44f2-845b-42827ccbac55))
+    (pin "1" (uuid 2ac7160b-85ca-46cc-b809-e63a1695b16f))
+    (pin "2" (uuid eda319b5-e0c5-4b73-829d-b16044dbe2e2))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3280,7 +3273,7 @@
     (property "Datasheet" "" (at 237.49 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 93b09da7-d8a7-4696-a636-858ed52b958c))
+    (pin "1" (uuid 197f303e-63aa-49e9-9e78-c81a87e2cb8a))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3305,7 +3298,7 @@
     (property "Datasheet" "" (at 26.67 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6b2589c0-e3a2-41eb-a0f7-4466adbd1921))
+    (pin "1" (uuid 456dde0d-9e96-4ac7-8df9-87db829a8167))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3354,7 +3347,7 @@
     (property "Datasheet" "~" (at 166.37 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0e04b030-1009-4c4a-99cc-a165141d05cc))
+    (pin "1" (uuid 8a82dc27-2ff9-452c-b4bc-7900b2bc3cd6))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3364,23 +3357,23 @@
     )
   )
 
-  (symbol (lib_id "Connector:Screw_Terminal_01x02") (at 196.85 125.73 0) (unit 1)
+  (symbol (lib_id "Connector:Screw_Terminal_01x02") (at 196.85 128.27 0) (mirror x) (unit 1)
     (in_bom no) (on_board yes) (dnp no)
     (uuid a5bf9b4a-47e9-4996-bd3b-b58082ca3df7)
-    (property "Reference" "J1" (at 196.85 134.62 0)
+    (property "Reference" "J1" (at 196.85 119.38 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Screw_Terminal_01x02" (at 196.85 121.92 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" (at 196.85 125.73 0)
+    (property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" (at 196.85 128.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 196.85 125.73 0)
+    (property "Datasheet" "~" (at 196.85 128.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3bc9e1e5-6cf2-45a1-a3f4-13472d999709))
-    (pin "2" (uuid 0adcf721-d28c-4e71-8a6c-9260d6a56966))
+    (pin "1" (uuid 001d9760-dee8-4f79-a558-b9fd920d8481))
+    (pin "2" (uuid fb20e209-8029-44dc-a20d-cc7ab2a4d72f))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3405,7 +3398,7 @@
     (property "Datasheet" "~" (at 55.88 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 5021cd4a-10b4-4d57-ab80-4dfc494d998b))
+    (pin "1" (uuid aaac2c41-0417-4999-bea3-61f3d22d6a17))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3433,8 +3426,8 @@
     (property "LCSC" "C19666" (at 50.8 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8735a010-5436-4232-9b1d-a26fd33fe4c4))
-    (pin "2" (uuid 6642a0cf-5ccc-4965-99bd-b72d7f26a02c))
+    (pin "1" (uuid 8235a957-68f1-4228-85f5-91cb9e275a7c))
+    (pin "2" (uuid 2869e7a7-31d6-40e1-89e3-7d8d134efdbb))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3459,7 +3452,7 @@
     (property "Datasheet" "" (at 127 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ba631694-f3da-4862-8bb8-ecbb757bc692))
+    (pin "1" (uuid b15495e8-7e9c-46f6-af74-b436420453a6))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3487,8 +3480,8 @@
     (property "LCSC" "C53987" (at 124.46 171.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1bcc42b3-c5e8-4d0e-8b86-9cad40e05943))
-    (pin "2" (uuid 11f3e437-8633-4170-8ebb-ab7d888ce67c))
+    (pin "1" (uuid bda57b36-c64a-4359-b9f9-78cb26774c9a))
+    (pin "2" (uuid c974a715-d025-4ec0-a582-5d70a66d2f9c))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3513,7 +3506,7 @@
     (property "Datasheet" "" (at 138.43 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid cc8da27b-939e-4362-8060-0533d2e13022))
+    (pin "1" (uuid a324ad51-b732-49cf-82cc-41c00d5032f3))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3538,8 +3531,8 @@
     (property "Datasheet" "~" (at 252.73 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1b430e6c-e868-4b0f-b659-8965d977b1a5))
-    (pin "2" (uuid 53d4b379-75d3-4924-a769-eb88d29ef355))
+    (pin "1" (uuid 06318201-e11c-4ce6-a189-e6761cb15d5c))
+    (pin "2" (uuid ca8159f6-71dc-4771-b269-8bb06c72d1c8))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3564,7 +3557,7 @@
     (property "Datasheet" "" (at 105.41 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3422acf7-660d-4730-80b4-ae73a71adaa7))
+    (pin "1" (uuid e5a940d6-7fb1-4fff-8d77-bef398572f10))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3592,8 +3585,8 @@
     (property "LCSC" "C19666" (at 26.67 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8d10618b-1fb5-447e-8478-2fc3e271a1c6))
-    (pin "2" (uuid 749f71af-5db0-47c0-b96e-e84b10e4d200))
+    (pin "1" (uuid f7b6213f-808c-4b5d-9e93-2db9c34f4b98))
+    (pin "2" (uuid 5cd18867-ea41-41f8-bc6c-08bce70384b1))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3618,7 +3611,7 @@
     (property "Datasheet" "" (at 184.15 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f483f61b-8d89-46f0-8804-50fcb810d0f4))
+    (pin "1" (uuid 6b045e2f-dfc1-45ab-87b3-9d6e760a4e51))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3643,35 +3636,11 @@
     (property "Datasheet" "~" (at 146.05 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e7f96a32-d9a9-45ef-823a-64a3cfd9184b))
+    (pin "1" (uuid 6fa20ceb-9678-4201-ba8c-a7bfbd2b0a08))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
           (reference "#FLG02") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole") (at 198.12 158.75 0) (unit 1)
-    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid bdf4ed37-4fc5-412d-b2dd-6379c3dab90e)
-    (property "Reference" "H2" (at 200.66 157.48 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MountingHole" (at 200.66 160.02 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3mm_Pad_Via" (at 198.12 158.75 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 198.12 158.75 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "shmoergh-dual-rail-psu"
-        (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
-          (reference "H2") (unit 1)
         )
       )
     )
@@ -3692,7 +3661,7 @@
     (property "Datasheet" "" (at 209.55 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f6a942d6-7530-4229-934a-8587bb64c57b))
+    (pin "1" (uuid 83bac9a2-becb-484a-b9de-42b72b2eb615))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3717,7 +3686,7 @@
     (property "Datasheet" "" (at 26.67 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6c07829d-4941-4e4f-98bd-405cb2e473e4))
+    (pin "1" (uuid 22469ac1-8c3c-4cf0-bd43-838df01f455c))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3742,7 +3711,7 @@
     (property "Datasheet" "" (at 74.93 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a0fc5b62-90cd-407f-ad64-61daf0d9249e))
+    (pin "1" (uuid 156e38bf-092d-4ec4-b45e-2793f780a332))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3770,8 +3739,8 @@
     (property "LCSC" "C57112" (at 113.03 171.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d65a62e9-cb3d-4afd-81ae-1e9f796f65cc))
-    (pin "2" (uuid 29ffdea9-1e88-424b-b6a2-6c8cee19bef6))
+    (pin "1" (uuid 8af8a6ea-840f-447c-86a6-1c2d658b9657))
+    (pin "2" (uuid 36ffcf59-0a8d-4e27-88ab-d71163b16b54))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3796,7 +3765,7 @@
     (property "Datasheet" "" (at 231.14 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1a23be7f-5154-40c8-812a-c984e0afdbcf))
+    (pin "1" (uuid 1505d253-acce-4fdc-8914-b1d65c94a37c))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3821,7 +3790,7 @@
     (property "Datasheet" "" (at 106.68 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 06b0023d-97db-40c3-8467-4ed64258d7ff))
+    (pin "1" (uuid 6d11e143-ee16-4298-a758-826f604793cb))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3846,7 +3815,7 @@
     (property "Datasheet" "" (at 55.88 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 92e30386-5238-4010-a668-1d4f362d8a77))
+    (pin "1" (uuid ee20654d-5adf-4f32-9089-a22587835f6c))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3871,7 +3840,7 @@
     (property "Datasheet" "" (at 50.8 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 19b60bfb-9de3-4ca0-a4ca-3803d38c75a2))
+    (pin "1" (uuid 429d4ee4-8366-4465-876c-bd999b71343a))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3899,8 +3868,8 @@
     (property "LCSC" "C21120" (at 129.54 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2098e1d8-9ddf-4742-a59a-735b27eac9eb))
-    (pin "2" (uuid bc307d8d-768e-4282-b601-13456b849ca6))
+    (pin "1" (uuid f092ef4a-c1e7-439e-8289-4342efcf7722))
+    (pin "2" (uuid e7c7e08f-2d64-4301-b459-a7f8727a1666))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3928,15 +3897,15 @@
     (property "LCSC" "C9864" (at 77.47 55.88 0)
       (effects (font (size 1.27 1.27)))
     )
-    (pin "1" (uuid f7c016b0-e064-4ed4-988e-2b830f4d73bd))
-    (pin "2" (uuid 40590be5-08d3-406c-b960-83678156fed8))
-    (pin "3" (uuid b53e5272-8d70-4182-b9db-51a86524590e))
-    (pin "4" (uuid d98f3944-7849-4b55-8de7-ce1f83614b73))
-    (pin "5" (uuid f385f457-75a6-4a18-9f0b-f10947913084))
-    (pin "6" (uuid 3d09aa60-4c10-4658-bece-f62f0f52abef))
-    (pin "7" (uuid 9235f55e-4418-45ee-85b2-67449394783d))
-    (pin "8" (uuid 9d87bc8e-45e7-4789-be85-c3324883aa33))
-    (pin "9" (uuid bf6a1576-288f-4350-977c-df89793eafa2))
+    (pin "1" (uuid 0040efe7-04e0-4945-b295-008b80104e9c))
+    (pin "2" (uuid 6d8568ba-16ae-4e54-8025-053d0b84ae1e))
+    (pin "3" (uuid 5a35c6c1-2890-49d4-a5b3-8f1dc1d1b4f0))
+    (pin "4" (uuid 25def372-10b8-48d2-90fa-4429eb582cc3))
+    (pin "5" (uuid e2a15c0d-6691-4104-be2b-a1c519ac02ad))
+    (pin "6" (uuid 40a8754a-e8f2-4ffb-bbea-f447eb02c6a6))
+    (pin "7" (uuid 8bd5d25d-7814-4e4c-90ce-acaee5bab4e6))
+    (pin "8" (uuid d2bde8f7-c9f1-4ec9-9688-73cb4c56063f))
+    (pin "9" (uuid bf344b5d-36f8-4d2a-9a0f-96020d00ee39))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3961,7 +3930,7 @@
     (property "Datasheet" "" (at 151.13 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 182ce3c5-3d77-4bd8-992b-32b014a0577b))
+    (pin "1" (uuid 28f69ed2-3cea-4fe5-9eee-509610b107f1))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -3986,7 +3955,7 @@
     (property "Datasheet" "" (at 152.4 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 5691bf0f-ad15-4574-b8f3-a06297c60cce))
+    (pin "1" (uuid d2302d32-bf09-45d3-9621-bcc2c636fe08))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4014,8 +3983,8 @@
     (property "LCSC" "C169398" (at 116.84 60.96 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b6d9187e-4672-4c82-acf1-ac3490fa2a76))
-    (pin "2" (uuid 59b28f73-fbad-4376-84a9-37b666629538))
+    (pin "1" (uuid 3b457eca-1521-4961-ad2b-26fbf1fa04e3))
+    (pin "2" (uuid a401f2bb-b63d-4022-b6ac-cab8a183bf6b))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4043,8 +4012,8 @@
     (property "LCSC" "C177248" (at 138.43 171.45 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 30a0cd0a-7a26-4083-93d1-247c82c4d753))
-    (pin "2" (uuid 0a95e18a-fbf7-487a-ad07-776211d74b9f))
+    (pin "1" (uuid 3ca7a5bd-236c-4e71-9e4a-c2b344001502))
+    (pin "2" (uuid 69af07e3-8347-4193-b73e-e1b43233b1ae))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4072,8 +4041,8 @@
     (property "LCSC" "C45783" (at 152.4 171.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c7f0bac4-5951-4a54-963e-9946674e15ee))
-    (pin "2" (uuid 6d411bea-98a3-404e-9fe6-4153b7a72d61))
+    (pin "1" (uuid 5722e3ef-bf84-4f0e-aa7b-79871b659732))
+    (pin "2" (uuid ad9c7801-9eb7-4a3e-9e66-46e1d48c315e))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4098,7 +4067,7 @@
     (property "Datasheet" "" (at 124.46 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e435db22-76d4-4b68-abcd-0d8f2a91beab))
+    (pin "1" (uuid ed040da6-e461-4d7a-9648-7a502db93b3e))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4123,7 +4092,7 @@
     (property "Datasheet" "" (at 124.46 128.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 06cc4bd3-1b76-43d9-99f0-3b4fb804eb1e))
+    (pin "1" (uuid 85fbf952-6119-4215-81fd-a0b17849bf11))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4148,7 +4117,7 @@
     (property "Datasheet" "" (at 226.06 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid bdc1ed16-b25a-430d-976f-74d58f11d348))
+    (pin "1" (uuid 1b9a1ca6-0fa9-4e36-8ec7-a74844785b74))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4173,7 +4142,7 @@
     (property "Datasheet" "~" (at 157.48 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid cd8ce71d-cefc-40b8-b046-c1698377ff99))
+    (pin "1" (uuid 9ea7eca4-0751-4738-8641-61b06fe8615c))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4198,7 +4167,7 @@
     (property "Datasheet" "" (at 209.55 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1164dfda-3591-431f-b899-d3763efbbbc4))
+    (pin "1" (uuid bbd29ac4-8670-46a9-8a01-3886726849c7))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4226,8 +4195,8 @@
     (property "LCSC" "C25867" (at 209.55 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 32b31c2e-1d31-45fb-aeb9-b64b4ed67ce6))
-    (pin "2" (uuid c848af65-8b7b-44d9-9d91-9701951aa21c))
+    (pin "1" (uuid d87346f9-d16c-4403-8e57-890d43ea67f1))
+    (pin "2" (uuid bd5901ae-313e-4a17-a5a1-1b0b53db7403))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4255,8 +4224,8 @@
     (property "LCSC" "C25803" (at 109.22 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 062c5864-908c-45f6-b7bd-50c15c23e1e9))
-    (pin "2" (uuid 33275ce3-00d8-4c4a-b88c-8a64846a86f1))
+    (pin "1" (uuid db662bc6-90ce-4070-a5d1-d49f4f0a80f2))
+    (pin "2" (uuid 85aa6826-a612-45e1-8475-7e524a708ff2))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
@@ -4284,8 +4253,8 @@
     (property "LCSC" "C25804" (at 140.97 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c5bbd870-5ef0-446a-8f67-bfc65f07fef9))
-    (pin "2" (uuid bea2262a-2afd-420d-9799-412b27a7396f))
+    (pin "1" (uuid fedaa6fb-6a02-4523-83e4-029b1777408f))
+    (pin "2" (uuid fe948bd0-e61b-445b-9143-6e5665a012b0))
     (instances
       (project "shmoergh-dual-rail-psu"
         (path "/89d328a3-7e80-44bd-8c4d-7128e2c0b3c8"
